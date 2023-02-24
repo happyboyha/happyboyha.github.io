@@ -47,7 +47,7 @@ if (window.ethereum) {
     (async function() {
         let network = await PROVIDER.getNetwork();
         if (network['chainId'] != CHAINID) {
-            //alert('Network is not ARB. Requesting to change network');
+            alert('Network is not ARB. Requesting to change network');
             await window.ethereum.request({
                 method: "wallet_addEthereumChain",
                 params: [{
